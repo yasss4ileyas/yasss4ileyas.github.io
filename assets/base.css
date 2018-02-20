@@ -67,6 +67,7 @@ header {
 }
 .intro {
     text-align: center;
+    padding: 0 8px;
 }
 .intro h1 {
     font-size: 50px;
@@ -82,8 +83,10 @@ header {
     color: #fff;
     font-size: 18px;
     letter-spacing: 2px;
+    font-weight: bold;
     padding: 0 24px;
     margin-top: 24px;
+    text-transform: uppercase;
     background-color: #F44336;
     line-height: 64px;
     cursor: pointer;
@@ -110,7 +113,6 @@ button.entry:active {
     -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.24);
     box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.24);
 }
-
 #head {
     position: fixed;
     cursor: pointer;
@@ -180,4 +182,30 @@ footer {
     bottom: 0;
     line-height: 64px;
     padding: 0 24px;
+}
+
+
+@media (max-width: 800px) {
+
+    ul li span {
+        display: none;
+    }
+    #wins {
+        font-size: 16px;
+    }
+
+    .smallText {
+        font-size: 16px;
+    }
+    .entry {
+        font-size: 14px;
+    }
+    .intro h1 {
+        font-size: 24px;
+        line-height: 34px;
+    }
+    .intro img {
+        height: 100px;
+    }
+
 }
