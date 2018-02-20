@@ -1,0 +1,183 @@
+
+/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
+
+button,hr,input{overflow:visible}audio,canvas,progress,video{display:inline-block}progress,sub,sup{vertical-align:baseline}[type=checkbox],[type=radio],legend{box-sizing:border-box;padding:0}html{font-family:sans-serif;line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:bolder}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative}sub{bottom:-.25em}sup{top:-.5em}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:ButtonText dotted 1px}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{color:inherit;display:table;max-width:100%;white-space:normal}textarea{overflow:auto}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}[hidden],template{display:none}
+
+/*! End of normalize.css v5.0.0  */
+
+*, *:before, *:after {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    margin:0;
+}
+html {
+    -webkit-font-smoothing: antialiased;
+    font-size: 13px;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    background-color: #795548;
+    max-width: 100%;
+    background-size: 350px auto;
+    background-repeat: repeat;
+    text-transform: uppercase;
+    background-image: url("repeatpatterns.jpg");
+    overflow-x: hidden;
+}
+::-moz-selection {
+    background: transparent;
+}
+::selection {
+    background: transparent;
+}
+img {
+    max-width: 100%;
+    cursor: pointer;
+}
+a {
+    color: inherit;
+    text-decoration: none;
+}
+svg {
+    height: 24px;
+    width: 24px;
+    fill: #fff;
+}
+header {
+    padding: 0 24px;
+    position: fixed;
+    z-index: 10;
+}
+.smallText {
+    font-size: 20px;
+    letter-spacing: 0.5px;
+}
+#fade {
+    height: 100vh;
+    width: 100%;
+    background-color: #444;
+    font-weight: 600;
+    z-index: 9;
+    position: fixed;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.intro {
+    text-align: center;
+}
+.intro h1 {
+    font-size: 50px;
+    line-height: 58px;
+    margin-bottom: 8px;
+    max-width: 600px;
+    pointer-events: none;
+}
+.intro img {
+    pointer-events: none;
+}
+.entry {
+    color: #fff;
+    font-size: 18px;
+    letter-spacing: 2px;
+    padding: 0 24px;
+    margin-top: 24px;
+    background-color: #F44336;
+    line-height: 64px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    border-radius: 3px;
+    border-top: 1px solid #FF5252;
+    border-bottom: 8px solid #C62828;
+    transition: .3s ease-out;
+    -webkit-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.24);
+    box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.24);
+}
+button.entry:hover {
+    -webkit-box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.16);
+    -moz-box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.16);
+    box-shadow: 0px 6px 16px 0px rgba(0,0,0,0.16);
+}
+button.entry:active {
+    background-color: #D32F2F;
+    border-top-width: 6px;
+    border-bottom-width: 3px;
+    -webkit-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.24);
+    -moz-box-shadow: 0px 3px 3px 0px rgba(0,0,0,0.24);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.24);
+}
+
+#head {
+    position: fixed;
+    cursor: pointer;
+    transition: 0.1s;
+}
+#head:hover {
+    transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+}
+#head:active {
+    -webkit-transform: rotate(170deg);
+    -ms-transform: rotate(170deg);
+    transform: rotate(170deg);
+}
+
+#timer {
+    position: fixed;
+    bottom: 0;
+    right: 32px;
+    z-index: 999;
+    line-height: 64px;
+}
+#wins {
+    font-size: 24px;
+    line-height: 36px;
+    display: none;
+}
+#highscoreContainer {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    display: none;
+    padding: 8px;
+    border-radius: 3px;
+    background-color: #444;
+}
+#prize {
+    color: #2196F3;
+    text-transform: uppercase;
+}
+#prize:hover {
+    text-decoration: underline;
+}
+ul {
+    display: flex;
+    height: 64px;
+    list-style: none;
+    align-items: center;
+    padding: 0;
+}
+ul li a, ul li {
+    display: flex;
+    cursor: pointer;
+}
+ul li span {
+    line-height: 24px;
+    padding: 0 32px 0 12px;
+}
+footer {
+    background-color: #F44336;
+    text-transform: initial;
+    position: fixed;
+    height: 64px;
+    width: 100%;
+    z-index: 99;
+    bottom: 0;
+    line-height: 64px;
+    padding: 0 24px;
+}
