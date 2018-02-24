@@ -88,6 +88,7 @@
   // img event listener finishes the game.
   img.addEventListener("click", function() {
     if (first) {
+      first = false;
       document.getElementById("infos").remove();
       wins.style.display = "block";
       hsCon.style.display = "block";
