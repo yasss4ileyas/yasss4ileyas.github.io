@@ -26,16 +26,18 @@
     "Awesome skills! You found me so fast!",
     "Yasss! Yasss! Yasss! You're awesome. Now go vote Ileyas!",
     "You must be a Pro!",
+    "Wow check you. You must be smart."
   ];
-
-  // href="https://twitter.com/intent/tweet?text=Hello%20world"
 
   const content = [
     {title: "The Mannifesto", link: "https://classic.luu.org.uk/leadluu/manifesto/10988/"},
     {title: "Campaign Video", link: "#coming-soon"},
     {title: "++Study Skills", link: "http://turnitin.com/en_us/resources/blog/2667-memes-how-do-you-cite-them"},
-    {title: "++Study Skills", link: "http://turnitin.com/en_us/resources/blog/2667-memes-how-do-you-cite-them"},
+    {title: "The debate",     link: "https://youtu.be/rOWT64Ht6R0?t=6h25m37s"},
   ];
+
+  const tweetUrl = "https://twitter.com/intent/tweet?text=";
+  const site     = "https://yasss4ileyas.github.io/";
 
   function rando(arr) { return arr[~~(Math.random() * arr.length)]; }
 
@@ -71,9 +73,19 @@
     img.style.transform = "rotate(" + (-30 + Math.random() * 60) + ")";
   }
 
+  function updateHighScore() {
+    highscore = (secs < highscore) ? secs.toFixed(2) : highscore;
+    hs.textContent = highscore;
+    hsCon.href = tweetUrl + encodeURIComponent(
+      ("Ah yeah! I just found Ileyas in "
+        + highscore + " secs."
+        + " see if you can find him too @ "
+        + site + " #Yasss4ILEYAS #LeadLUU"));
+  }
+
   // ##### event listeners.
 
-  // add image and event listener
+  // img event listener finishes the game.
   img.addEventListener("click", function() {
     if (first) {
       wins.style.display = "block";
@@ -81,9 +93,8 @@
       play.textContent = "Play Again";
     }
     stopTimer();
-    // update highscore
-    highscore = (secs < highscore) ?secs.toFixed(2) : highscore;
-    hs.textContent = highscore;
+    updateHighScore();
+
     // update unlocked prize.
     let p = rando(content);
     prize.href = p.link;
@@ -93,11 +104,13 @@
     // make play button clickable.
     play.style.pointerEvents = "auto";
     fade.style.pointerEvents = "auto";
+    prize.style.pointerEvents = "auto";
     fade.style.display = "flex";
     fade.style.zIndex = 9;
     fade.style.opacity = 1;
   });
 
+  // start button starts / restarts the game.
   play.addEventListener("click", function() {
     setChallenge();
     startTimer();
