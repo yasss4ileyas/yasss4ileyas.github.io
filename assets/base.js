@@ -34,6 +34,7 @@
     {title: "Campaign Video", link: "#coming-soon"},
     {title: "++Study Skills", link: "http://turnitin.com/en_us/resources/blog/2667-memes-how-do-you-cite-them"},
     {title: "The debate",     link: "https://youtu.be/rOWT64Ht6R0?t=6h25m37s"},
+    {title: "Your Vote",      link: "https://classic.luu.org.uk/leadluu/Overview/"},
   ];
 
   const tweetUrl = "https://twitter.com/intent/tweet?text=";
